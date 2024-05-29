@@ -1,0 +1,19 @@
+---
+name: Faucet an account on baklava
+command: "# Get the secret from Secret Manager and save to disk\ngcloud secrets versions access latest --secret=\"baklava_llc_private_key\" --project=\"celo-testnet-production\" > ./baklava_faucet.key\n\n# Transfer to the account\ncelocli transfer:celo -n {{baklava_rpc_endpoint}} --privateKey $(cat ./baklava_faucet.key) --from 0xfCf982bb4015852e706100B14E21f947a5Bb718E --to {{address}} --value {{amount}}\n\n# Delete the secret\nrm -f ./baklava_faucet.key\n"
+tags: []
+description: Using baklava llc key
+arguments:
+  - name: baklava_rpc_endpoint
+    description: ~
+    default_value: "wss://baklava-forno.celo-testnet.org"
+  - name: address
+    description: ~
+    default_value: ~
+  - name: amount
+    description: ~
+    default_value: "1001e19"
+source_url: ~
+author: ~
+author_url: ~
+shells: []

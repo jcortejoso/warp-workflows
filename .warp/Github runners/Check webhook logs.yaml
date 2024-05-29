@@ -1,0 +1,10 @@
+---
+name: Check webhook logs
+command: kubectl logs
+tags: []
+description: ~
+arguments: []
+source_url: ~
+author: ~
+author_url: ~
+shells: []

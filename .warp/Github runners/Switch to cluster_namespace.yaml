@@ -1,0 +1,10 @@
+---
+name: Switch to cluster/namespace
+command: "kubectx gke_celo-testnet_us-west1-b_integration-tests\nkubens actions-runner-system"
+tags: []
+description: ~
+arguments: []
+source_url: ~
+author: ~
+author_url: ~
+shells: []

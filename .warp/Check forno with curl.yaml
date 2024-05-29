@@ -1,0 +1,13 @@
+---
+name: Check forno with curl
+command: "curl -X POST -s --data '{\"jsonrpc\":\"2.0\",\"method\":\"eth_blockNumber\",\"params\":[],\"id\":1}' -H 'Content-Type: application/json' -i https://forno.celo.org/ # -H 'apikey: {{apikey}}'"
+tags: []
+description: ~
+arguments:
+  - name: apikey
+    description: ~
+    default_value: QFpo8kqynV2gF7eWuCcHiqTnqAzUXPW2X6f6kaFpka8HNbymB89ULQrjqYCge3EU
+source_url: ~
+author: ~
+author_url: ~
+shells: []

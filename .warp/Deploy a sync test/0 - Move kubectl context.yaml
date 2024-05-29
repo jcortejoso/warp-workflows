@@ -1,0 +1,13 @@
+---
+name: 0 - Move kubectl context
+command: "kubectx {{context}}"
+tags: []
+description: ~
+arguments:
+  - name: context
+    description: ~
+    default_value: gke_celo-testnet_us-west1-b_integration-tests
+source_url: ~
+author: ~
+author_url: ~
+shells: []

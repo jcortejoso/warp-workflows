@@ -1,0 +1,22 @@
+---
+name: 1 - Deploy sync-test (fullnode)
+command: "network={{networkName}}\nif [[ \"$network\" -eq \"alfajores\" ]]; then\n    networkid=44787\nelif [[ \"$network\" -eq \"baklava\" ]]; then\n    networkid=62320\nelif [[ \"$network\" -eq \"mainnet\" ]]; then\n    networkid=42220\nfi\ncat >/tmp/sync-values.yaml <<EOF\ngenesis:\n  network: $network\n  networkId: $networkid\ngeth:\n  image:\n    repository: {{imageRepo}}\n    tag: {{imageTag}}\n  pprof:\n    enabled: true\nmetrics: true\nreplicaCount: 1\nstorage:\n  annotations:\n    resize.topolvm.io/increase: 10%\n    resize.topolvm.io/inodes-threshold: 90%\n    resize.topolvm.io/storage_limit: 1000Gi\n    resize.topolvm.io/threshold: 10%\n  enable: true\n  size: 20Gi\n  storageClass: premium-rwo\nEOF\n\nhelm upgrade --install $network --namespace {{namespace}} --create-namespace -f /tmp/sync-values.yaml oci://us-west1-docker.pkg.dev/devopsre/clabs-public-oci/celo-fullnode"
+tags: []
+description: ~
+arguments:
+  - name: networkName
+    description: ~
+    default_value: ~
+  - name: imageRepo
+    description: ~
+    default_value: us-west1-docker.pkg.dev/devopsre/dev-images/geth
+  - name: imageTag
+    description: ~
+    default_value: 44c749030bb53112c94a99c9e5ce347517a67c52
+  - name: namespace
+    description: ~
+    default_value: sync-baklava-1-8-1
+source_url: ~
+author: ~
+author_url: ~
+shells: []

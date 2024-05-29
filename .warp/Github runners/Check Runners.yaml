@@ -1,0 +1,13 @@
+---
+name: Check Runners
+command: "kubectl get runners {{extra_flags}}"
+tags: []
+description: ~
+arguments:
+  - name: extra_flags
+    description: ~
+    default_value: "-w"
+source_url: ~
+author: ~
+author_url: ~
+shells: []

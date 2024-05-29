@@ -1,0 +1,10 @@
+---
+name: Check block time
+command: "{n = 1500; j = eth.blockNumber; i = j - n; if (i<0) i=0; avg = (eth.getBlock(j).timestamp - eth.getBlock(i).timestamp) / (j-i); res = {latestBlock: j, lookback: i, averageSeconds: avg}}"
+tags: []
+description: ~
+arguments: []
+source_url: ~
+author: ~
+author_url: ~
+shells: []

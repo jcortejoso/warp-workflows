@@ -1,0 +1,10 @@
+---
+name: Set Block Size and Target Density
+command: "open https://gist.github.com/jcortejoso/9de4ca552a1977aa752eb4e2fe9b548a"
+tags: []
+description: This must be executed form validator-0 (in globaltestnet us validator-0)
+arguments: []
+source_url: ~
+author: ~
+author_url: ~
+shells: []

@@ -1,0 +1,16 @@
+---
+name: Annotate PVCs with PVC Resizer annotations
+command: "kubectl annotate pvc -n {{namespace}} {{pvcs}} resize.topolvm.io/increase='5Gi' resize.topolvm.io/storage_limit='500Gi' resize.topolvm.io/threshold='10%' --overwrite"
+tags: []
+description: ~
+arguments:
+  - name: namespace
+    description: ~
+    default_value: ~
+  - name: pvcs
+    description: ~
+    default_value: ~
+source_url: ~
+author: ~
+author_url: ~
+shells: []

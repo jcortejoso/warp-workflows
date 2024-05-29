@@ -1,0 +1,6 @@
+---
+"editor_view:move_backward_one_word": ctrl-left
+"editor_view:move_forward_one_word": ctrl-right
+"editor_view:add_next_occurrence": cmd-d
+"pane_group:add_right": alt-shift-D
+"editor:insert_last_word_previous_command": alt-.
